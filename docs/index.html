@@ -21,7 +21,7 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Ingredient Interactions</h1>
-							<p class="major"><b>Food</b> and <b>cooking</b> are defining centerpieces of many cultures. We often can quickly put a cuisine label to a certain dish, but how much do we understand what it means for a dish to be from a certain country? And what does it mean to even be a "dish?" If these questions tickle you, we invite you to join us on this interactive exploration of recipes.</p>
+							<p class="major"><b>Food</b> and <b>cooking</b> are defining centerpieces of many cultures. We may broadly think of pasta as Italian and noodles as East Asian, but what does it really mean for a dish to be labeled as a country or region's cuisine? What makes cuisines similar or different from each other? If these questions tickle you, we invite you to join us on this interactive exploration of recipes.</p>
 							<ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
 							</ul>
@@ -34,10 +34,7 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>The dataset</h2>
-							<p>One way to think about a dish is its constituent ingredients and how they work together, and this is the approach that we take here. Our dataset [insert Kaggle link] comprises recipes from xxxx different cuisines that are labeled by country. Hover over the map to explore which countries these are and some typical ingredients that characterize each cuisine. Note that our dataset only covers a few of the world's cuisines, but we think it's a start.</p>
-							<ul class="actions stacked">
-								<li><a href="https://www.google.com" class="button" target="_blank">Learn More About Our Countries</a></li>
-							</ul>
+							<p>One way to think about a dish is the ingredients it contains. We're exploring <a href="https://www.kaggle.com/kaggle/recipe-ingredients-dataset">a dataset</a> that contains <b>39,774 recipes</b> from 20 different cuisines spanning 5 continents. Hover over the map to explore which countries these are and some typical ingredients that characterize each cuisine.</p>
 						</div>
 						<div class="image">
 							<iframe width="100%" height="510" frameborder="0"
@@ -45,24 +42,50 @@
 						</div>
 					</section>
 
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>What are the most common ingredients in each cuisine?</h2>
-							<p>Instructions about hovering and stuff.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>
-
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>Finding "notable" ingredients</h2>
-							<p>As you can see, seasonings such as salt, oil, and garlic are dominant in many cuisines and not particularly informative. We thus needed to do a little bit of data wrangling to find <b>notable</b> ingredients that are uniquely common in a given cuisine. To do this, we did aldfjewoifjawoeifjawoeifjawoifwoifj. And plotting along these two vectors, we can now better see cuisines' relationships to one another based on <b>notable</b> ingredients in their recipes.</p>
+							<div class="index align-left">
+								<header>
+									<h2>Popular Ingredients</h2>
+								</header>
+								<div class="content">
+									<p>
+										First, we'll take a look at what ingredients tend to be <b>most popular</b> in each cuisine. Below, you'll see a series of bar charts showing the top 10 ingredients in each cuisine, where cuisines are colored and grouped by continent.
+										<br><br>
+										<b>Hover</b> over bars to see which popular ingredients are shared across cuisines. Which cuisines tend to use a lot of <b>butter</b>? Which cuisines use a lot of <b>soy sauce</b>? Are any foundational ingredients uniquely popular to only one cuisine?
+									</p>
+								</div>
+							</div>
+							<div class="content align-center">
+									<div id="observablehq-foundational_ingredients-c6015cd2"></div>
+									<script type="module">
+									import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+									import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
+									new Runtime().module(define, name => {
+									  if (name === "foundational_ingredients") return new Inspector(document.querySelector("#observablehq-foundational_ingredients-c6015cd2"));
+									});
+									</script>
+							</div>
+							<div class="content align-left">
+								<p>
+									From these charts, we get some sense that some cuisines may share many ingredients, while some do not. Are cuisines within the same continent more similar to each other than cuisines across continents? Maybe there is a better way to see if this is the case...
+								</p>
+
+								<h3>Rethinking how we count ingredients</h3>
+								<p>It's not too interesting that most cuisines use a lot of salt. You may be more interested in what ingredients are actually <b>special and notable</b> in a cuisine. To do this, we find ingredients are often used in each cuisine but not in all other cuisines, similar to what was in done in <a href="https://flowingdata.com/2018/09/18/cuisine-ingredients/">Flowing Data's visualization</a>.</p>
+
+								<h3>Mapping similarity of cuisines</h3>
+								<p>It's also hard to see which cuisines are more similar to each other, and which are not. However, there are over <b>65 thousand unique ingredients</b> in our dataset, and we can't just go through each and every one and eyeball if it's shared or not between two cuisines. That would take forever!
+								<br><br>
+								Instead, we take the long list of ingredient counts for each cuisine...
+								<br><br>
+								Do some math magic to squash it down...
+								<br><br>
+								All the way to just <b>two dimensions</b>, so we can look at how cuisines relate to each on a 2D computer screen. 
+								</p>
+							</div>
 						</div>
+					</section>
 
 				<!-- Four -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
