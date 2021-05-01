@@ -34,10 +34,15 @@
 							<h2>Cuisine data</h2>
 							<p>Cuisines are often characterized by the ingredients they use. We're exploring <a href="https://www.kaggle.com/kaggle/recipe-ingredients-dataset">a dataset</a> that contains <b>39,774 recipes</b> from 20 different cuisines spanning 5 continents. Hover over the map to explore which countries these are and some typical ingredients that characterize each cuisine.</p>
 						</div>
-						<div class="image">
-							<iframe width="100%" height="510" frameborder="0"
-  src="https://observablehq.com/embed/c93fecf6c8c095b1?cells=map"></iframe>
-						</div>
+						<div id="observablehq-map-0431630e"></div>
+
+						<script type="module">
+						import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+						import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
+						new Runtime().module(define, name => {
+						  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-0431630e"));
+						});
+						</script>
 					</section>
 
 					<section class="wrapper style1 align-center">
@@ -49,7 +54,7 @@
 						<!-- Gallery -->
 							<div class="gallery style2 small onscroll-fade-in">
 								<article>
-									<a href="./images/cuisines/brazilian.jpeg" class="image">
+									<a href="https://en.wikipedia.org/wiki/Brazilian_cuisine" class="image">
 										<img src="./images/cuisines/brazilian.jpeg" alt="Brazilian bean stew with rice and oranges" />
 									</a>
 									<div class="caption">
@@ -260,7 +265,7 @@
 								<p>
 									This was a class project by two Berkeley students. You can see the code we wrote to generate these visualizations and the resources we used to learn d3 <a href="https://observablehq.com/@info247-spring21/ingredient-interactions-an-exploration-of-recipes">here</a>.
 								</p>
-								<p>Note that these visualizations seemed to work best in Google Chrome.</p>
+								<p>Note that these visualizations seemed to work best in Google Chrome and on a computer instead of mobile.</p>
 							</div>
 						</div>
 					</section>

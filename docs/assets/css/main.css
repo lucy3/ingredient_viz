@@ -2113,7 +2113,7 @@ input, select, textarea {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
-		font-size: 0.75rem;
+		font-size: 0.5rem;
 		max-width: 20rem;
 		height: 3.75em;
 		line-height: 3.75em;
@@ -2121,6 +2121,9 @@ input, select, textarea {
 		padding: 0 2.5em;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-top: 0.5rem;
 	}
 
 		input[type="submit"].icon:before,
