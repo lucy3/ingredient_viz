@@ -6375,6 +6375,7 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
+		height: 100%;
 		width: 100%;
 		background-color: transparent;
 	}
