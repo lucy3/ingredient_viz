@@ -34,15 +34,15 @@
 							<h2>Cuisine data</h2>
 							<p>Cuisines are often characterized by the ingredients they use. We're exploring <a href="https://www.yummly.com/">Yummly</a>'s <a href="https://www.kaggle.com/kaggle/recipe-ingredients-dataset">dataset</a> that contains <b>39,774 recipes</b> from 20 different cuisines spanning 5 continents. Hover over the map to explore which countries these are and some typical ingredients that characterize each cuisine.</p>
 						</div>
-						<div id="observablehq-map-0431630e"></div>
-
-						<script type="module">
-						import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-						import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
-						new Runtime().module(define, name => {
-						  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-0431630e"));
-						});
-						</script>
+						<div id="observablehq-map2-ec4ae52c"></div>
+							<script type="module">
+								import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+								import define from "https://api.observablehq.com/d/6ff8d3fcb0277a42.js?v=3";
+								new Runtime().module(define, name => {
+								  if (name === "map2") return new Inspector(document.querySelector("#observablehq-map2-ec4ae52c"));
+								  return ["map_tooltip"].includes(name);
+								});
+							</script>
 					</section>
 
 					<section class="wrapper style1 align-center">
@@ -253,13 +253,13 @@
 								</p>
 							</div>
 							<div class="content align-center">
-									<div id="observablehq-foundational_ingredients-c6015cd2"></div>
+								<div id="observablehq-foundational_ingredients-87435d70"></div>
 									<script type="module">
-									import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-									import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
-									new Runtime().module(define, name => {
-									  if (name === "foundational_ingredients") return new Inspector(document.querySelector("#observablehq-foundational_ingredients-c6015cd2"));
-									});
+										import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+										import define from "https://api.observablehq.com/d/6ff8d3fcb0277a42.js?v=3";
+										new Runtime().module(define, name => {
+										if (name === "foundational_ingredients") return new Inspector(document.querySelector("#observablehq-foundational_ingredients-87435d70"));
+										});
 									</script>
 							</div>
 							<div class="content align-left">
@@ -286,21 +286,20 @@
 										<b>Jamaican</b>: 0.83, 0.04.</p>
 									</div>
 								</div>
-								<p>... all the way to just <b>two numbers</b>, so we can look at how much cuisines relate to each other on a 2D computer screen. In the scatter plot below, cuisines are located based on the values of these two numbers and <b>cuisines that are closer to each other are more similar</b>. 
+								<p>... all the way to just <b>two numbers</b>, so we can look at how much cuisines relate to each other on a 2D computer screen. In the scatter plot below, cuisines are located based on the values of these two numbers and <b>cuisines that are closer to each other are more similar</b>.
 								</p>
 
 								<p><b>Hover</b> over each cuisine's point to view more information about where it is from and some of its notable ingredients. A notable ingredient is one that is often used in one cuisine but not in all other cuisines, and we found these using a calculation similar to what was in done in <a href="https://flowingdata.com/2018/09/18/cuisine-ingredients/">Flowing Data's visualization</a>.</p>
 							</div>
-							<div id="observablehq-chart_scatter-2bb14ea1"></div>
-
-							<script type="module">
-							import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-							import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
-							new Runtime().module(define, name => {
-							  if (name === "chart_scatter") return new Inspector(document.querySelector("#observablehq-chart_scatter-2bb14ea1"));
-							  return ["tooltip","circles","highlight"].includes(name);
-							});
-							</script>
+							<div id="observablehq-chart_scatter-b1c61071"></div>
+								<script type="module">
+									import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+									import define from "https://api.observablehq.com/d/6ff8d3fcb0277a42.js?v=3";
+									new Runtime().module(define, name => {
+									  if (name === "chart_scatter") return new Inspector(document.querySelector("#observablehq-chart_scatter-b1c61071"));
+									  return ["tooltip","circles","highlight"].includes(name);
+									});
+								</script>
 
 							<div class="content align-left">
 								<p>Do you notice any interesting outliers, or similarities that surprised you?</p>
@@ -318,14 +317,14 @@
 								<p>Food for thought: what regions of the network seem to correspond to <b>Asian cuisines</b>? Can you find the community of nodes that corresponds to <b>dessert</b> ingredients?</p>
 								<p>You can <b>zoom</b> for a closer look, <b>hover</b> over nodes to see their neighbors, <b>click</b> on nodes to lock in the view of their and their neighbors' labels, and <b>click</b> again to release.</p>
 							</div>
-							<div id="observablehq-chart2-80baa533"></div>
-							<script type="module">
-							import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-							import define from "https://api.observablehq.com/d/c93fecf6c8c095b1.js?v=3";
-							new Runtime().module(define, name => {
-							  if (name === "chart2") return new Inspector(document.querySelector("#observablehq-chart2-80baa533"));
-							});
-							</script>
+							<div id="observablehq-chart2-87435d70"></div>
+								<script type="module">
+								import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+								import define from "https://api.observablehq.com/d/6ff8d3fcb0277a42.js?v=3";
+								new Runtime().module(define, name => {
+								  if (name === "chart2") return new Inspector(document.querySelector("#observablehq-chart2-87435d70"));
+								});
+								</script>
 							<div class="content align-left">
 								<p>We hope you enjoyed these visualizations and learned about how cuisines from different areas of the world relate to each other.</p>
 							</div>

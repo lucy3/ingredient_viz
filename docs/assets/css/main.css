@@ -2704,7 +2704,7 @@ input, select, textarea {
 		padding-left: 1rem;
 	}
 
-		ul li { 
+		ul li {
 			padding-left: 0.5rem;
 		}
 
@@ -7482,6 +7482,15 @@ input, select, textarea {
 
 	body.is-preload .items.onload-fade-in > * > .inner {
 		opacity: 0;
+	}
+
+	path {
+	  stroke: white;
+	  stroke-width: 0.25px;
+	  stroke-linejoin: round;
+	  stroke-linecap: round;
+	  vector-effect: non-scaling-stroke;
+	  fill: Gainsboro;
 	}
 
 	.items.onscroll-fade-in > * > .inner {
