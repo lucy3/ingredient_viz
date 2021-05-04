@@ -32,7 +32,7 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Cuisine data</h2>
-							<p>Cuisines are often characterized by the ingredients they use. We're exploring <a href="https://www.yummly.com/">Yummly</a>'s <a href="https://www.kaggle.com/kaggle/recipe-ingredients-dataset">dataset</a> that contains <b>39,774 recipes</b> from 20 different cuisines spanning 5 continents. Hover over the map to explore which countries these are and some typical ingredients that characterize each cuisine.</p>
+							<p>Cuisines are often characterized by the ingredients they use. We're exploring <a href="https://www.yummly.com/">Yummly</a>'s <a href="https://www.kaggle.com/kaggle/recipe-ingredients-dataset">dataset</a> that contains <b>39,774 recipes</b> from 20 different cuisines spanning 5 continents. Hover over the map to explore which countries these are and how many recipes each country has in our dataset.</p>
 						</div>
 						<div id="observablehq-map2-ec4ae52c"></div>
 							<script type="module">
@@ -247,7 +247,7 @@
 							</header>
 							<div class="content align-left">
 								<p>
-									First, we'll take a look at what ingredients tend to be <b>most popular</b> in each cuisine. Below, you'll see a series of bar charts showing the top 10 ingredients in each cuisine, where cuisines are colored and grouped by continent.
+									First, we'll take a look at what ingredients tend to be <b>most popular</b> in each cuisine. Below, you'll see a series of bar charts showing the top 10 ingredients in each cuisine, with cuisines colored and grouped by continent.
 									<br><br>
 									<b>Hover</b> over bars to see which popular ingredients are shared across cuisines. Which cuisines tend to use a lot of <b>butter</b>? Which cuisines use a lot of <b>soy sauce</b>? Are any foundational ingredients uniquely popular to only one cuisine?
 								</p>
@@ -278,7 +278,7 @@
 							<div class="content align-left">
 								<p>We want to know how cuisines compare to each other. However, there are over <b>65 thousand unique ingredients</b> in our dataset, and we can't just go through each and every one and eyeball if it's shared or not between two cuisines. That would take forever!
 								<br><br>
-								Instead, we take the long list of ingredients for each cuisine, and do some <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">computational<a> <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">magic</a> to squash it down ...</p>
+								Instead, we take the long list of ingredients for each cuisine and do some <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">computational<a> <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">magic</a> to squash it down ...</p>
 								<div class="box">
 									<div class="content align-center">
 										<p><b>Jamaican</b>: 332 salt, 173 onions, 153 water, 139 garlic, 128 ground allspice, 125 pepper, 111 scallions, 105 dried thyme, 103 black pepper, 101 garlic cloves, 96 vegetable oil, 89 ground black pepper, 80 sugar, 75 ground cinnamon, 72 thyme, 72 brown sugar, 71 coconut milk, 67 soy sauce, 66 olive oil, 66 curry powder ...
@@ -286,10 +286,10 @@
 										<b>Jamaican</b>: 0.83, 0.04.</p>
 									</div>
 								</div>
-								<p>... all the way to just <b>two numbers</b>, so we can look at how much cuisines relate to each other on a 2D computer screen. In the scatter plot below, cuisines are located based on the values of these two numbers and <b>cuisines that are closer to each other are more similar</b>.
+								<p>... all the way to just <b>two numbers</b> (which we'll call "Cuisine Dimension 1" and "Cuisine Dimension 2"), so we can look at how much cuisines relate to each other on a 2D chart. In the scatter plot below, cuisines are located based on the values of these two numbers. <b>Cuisines that are closer to each other are more similar</b>.
 								</p>
 
-								<p><b>Hover</b> over each cuisine's point to view more information about where it is from and some of its notable ingredients. A notable ingredient is one that is often used in one cuisine but not in all other cuisines, and we found these using a calculation similar to what was in done in <a href="https://flowingdata.com/2018/09/18/cuisine-ingredients/">Flowing Data's visualization</a>.</p>
+								<p><b>Hover</b> over each cuisine's point to view more information about where it is from and some of its <b>notable ingredients</b>. A notable ingredient is one that is often used in one cuisine but not in any other cuisine. These are extracted using a calculation similar to what was in done in <a href="https://flowingdata.com/2018/09/18/cuisine-ingredients/">Flowing Data's visualization</a>.</p>
 							</div>
 							<div id="observablehq-chart_scatter-b1c61071"></div>
 								<script type="module">
@@ -312,7 +312,7 @@
 								<h2>A Network of Ingredients</h2>
 							</header>
 							<div class="content align-left">
-								<p>Let's zoom in even further on the ingredients used in these cuisines. We know that some classic pairs of flavors go very well together, like tomato and basil. What are some common pairings of ingredients? Are pairings divided based on regional cuisine differences?</p>
+								<p>Let's zoom in even further on the ingredients used in these cuisines. We know that some classic pairs of flavors go very well together, like tomato and basil. What are other common pairings of ingredients? Are pairings divided based on regional cuisine differences?</p>
 								<p>We create a network of popular ingredients, drawing edges between the most significantly <a href="https://en.wikipedia.org/wiki/Pointwise_mutual_information">co-occurring</a> pairs. Nodes are colored by continent, if at least <b>75% of their recipes</b> are in that continent. Gray nodes are ingredients that are used across continents.</p>
 								<p>Food for thought: what regions of the network seem to correspond to <b>Asian cuisines</b>? Can you find the community of nodes that corresponds to <b>dessert</b> ingredients?</p>
 								<p>You can <b>zoom</b> for a closer look, <b>hover</b> over nodes to see their neighbors, <b>click</b> on nodes to lock in the view of their and their neighbors' labels, and <b>click</b> again to release.</p>
@@ -337,10 +337,10 @@
 							</header>
 							<div class="content align-left">
 								<p>
-									This was a class project by two Berkeley students. You can see the code we wrote to generate these visualizations and the resources we used to learn d3 <a href="https://observablehq.com/@info247-spring21/ingredient-interactions-an-exploration-of-recipes">here</a>.
+									This was a class project by two Berkeley students. You can see the code we wrote to generate these visualizations and the resources we used to learn d3 <a href="https://observablehq.com/d/6ff8d3fcb0277a42">here</a>.
 								</p>
-								<p>Note that these visualizations seemed to work best in Google Chrome and on a computer instead of mobile.</p>
-								<p>The images in the cuisine gallery are pulled from their Wikipedia pages, or the Wikipedia pages that list dishes from each cuisine.</p>
+								<p>Note that this website is best viewed using Google Chrome and on a computer instead of mobile.</p>
+								<p>The first image is our own. Images in the cuisine gallery are pulled from their Wikipedia pages, or the Wikipedia pages that list dishes from each cuisine.</p>
 							</div>
 						</div>
 					</section>
